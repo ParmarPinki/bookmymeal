@@ -1,0 +1,58 @@
+{% extends 'adminhome.html' %}
+
+{% load static %}
+
+{% block page %}
+
+<center>
+<br>
+<h2>View And Manage Users</h2>
+
+<table cellspacing="10">
+<tr>
+<th>RegId</th>
+<th>Name</th>
+<th>Email</th>
+<th>Mobile</th>
+<th>Address</th>
+<th>City</th>
+<th>Gender</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+<tr><td colspan="9"><hr/></td></tr>
+{% for user in userDetails %}
+<tr>
+<td>{{user.0}}</td>	
+<td>{{user.1}}</td>	
+<td>{{user.2}}</td>
+<td>{{user.4}}</td>	
+<td>{{user.5}}</td>	
+<td>{{user.6}}</td>
+<td>{{user.7}}</td>
+<td>
+{% if user.9 %}
+<a title="Block User" href=http://127.0.0.1:8000/myadmin/manageuserstatus/?regid={{user.0}}&s=block  >
+<img src="{% static 'images/block.png' %}" height="50" width="70" />
+</a>
+{% else %}
+<a title="Un-Block User" href=http://127.0.0.1:8000/myadmin/manageuserstatus/?regid={{user.0}}&s=unblock  >
+<img src="{% static 'images/unblock.jpeg' %}" height="50" width="70" />
+</a>
+{% endif %}
+</td>	
+<td>
+<a title="Delete User" href=http://127.0.0.1:8000/myadmin/manageuserstatus/?regid={{user.0}}&s=delete  >
+<img src="{% static 'images/delete1.png' %}" height="50" width="70" />
+</a>
+</td>				
+</tr>
+<tr><td colspan="9"><hr/></td></tr>
+{% endfor %}
+
+</table>
+
+
+
+</center>
+{% endblock %}	

@@ -1,0 +1,59 @@
+{% extends 'adminhome.html' %}
+
+{% block page %}
+<br>
+<h2>Add Food Product Here!!!</h2>
+
+<font style="font-size:20px;" color="orange" >{{output}}</font>
+<form method="post" enctype="multipart/form-data" action='http://127.0.0.1:8000/myadmin/addfood/' >
+{% csrf_token %}
+<table cellspacing="15">
+
+<tr>
+<td>Category Name</td>
+<td>
+<select name="catnm" style="width:250px; border-radius: 5px;">
+<option>Select category</option>
+{% for cat in clist %}
+	<option>{{cat.1}}</option>
+{% endfor %}
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Food Product Name</td>
+<td><input type="text" name="foodnm" placeholder="Enter food name"/></td>
+</tr>
+
+<tr>
+<td>Icon</td>
+<td><input type="file" name="foodicon" style="border-radius: 5px;" /></td>
+</tr>
+
+<tr>
+<td>Description</td>
+<td><input type="textarea" name="disc" style="border-radius: 5px;" /></td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td><input type="text" name="price" placeholder="Enter Price "/></td>
+</tr>
+
+
+<tr>
+<td>
+<input type="submit" value="Add Food" style="border-radius: 5px;" />
+</td>
+</tr>
+
+
+</table>
+
+</form>
+
+
+{% endblock %}	
+
+

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{{output}}
+<br>
+<h1>Login Here!!!</h1><br>
+
+<form method="POST" action='http://127.0.0.1:8000/login/' >
+{% csrf_token %}
+<table cellspacing="20">
+
+<tr>
+<td>Username</td>
+<td><input type="text" name="email" placeholder="Enter Username" style="border-radius: 5px; width : 250px; height : 28px ; padding-left:5px;" /> </td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td><input type="password" name="password" placeholder="Enter password" style="border-radius: 5px; width : 250px; height : 28px ; padding-left:5px;" /> </td>
+</tr>
+
+<tr>
+<td><input type="submit" value="Login" style="border-radius: 5px;  height : 35px ; text-align: center; width : 80px;" /> </td>
+</tr>
+
+</table>
+</form>
+
+{% endblock %} 

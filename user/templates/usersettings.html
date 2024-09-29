@@ -1,0 +1,111 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block menu %}	
+
+<div id="menu">
+			<ul>
+				<li class="first active">
+					<a href="http://127.0.0.1:8000/user">User Home</a>
+				</li>
+				<li>
+					<a href="#">Manage Order </a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/user/settings/">Settings</a>
+				</li>
+<!-- 				<li><a >More</a>
+				<ul>
+<li><a href="" >Edit Profile</a></li>
+<li><a href="" >Change Password</a></li>
+<li><a href="" >View Notifications</a></li>
+<li><a href="" >Launch Feedbacks</a></li>
+</ul>
+</li> -->
+				<li>
+					<a href="http://127.0.0.1:8000/login/">Logout</a>
+				</li>
+				<!-- <li>
+					<a href="http://127.0.0.1:8000/register/">Register</a>
+				</li> -->
+				
+			</ul><br class="clearfix" />
+		</div>
+
+
+{% endblock %}	
+
+{% block content %}
+
+
+<style type="text/css">
+
+#link{
+
+	height: 20px;
+	width:200px;
+	border-style: solid;
+	padding: 10px;
+	margin-bottom:5px;
+	padding-bottom: 10px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+
+#link:hover{
+	background: white;
+	
+}
+</style>
+
+<center>
+<h2>Settings</h2>
+
+
+<h3 id="link"><a href="" style="text-decoration: none ;color:green">Edit Profile</a></h3>
+<br>
+<h3 id="link"><a href="" style="text-decoration: none ;color:green">Change Password</a></h3>
+
+<br>
+<h3 id="link"><a href="" style="text-decoration: none ;color:green">View Notifications</a></h3>
+
+<br>
+<h3 id="link"><a href="" style="text-decoration: none ;color:green ;margin-bottom: 10px;" >Logout</a></h3>
+
+</center>
+
+
+
+{% endblock %}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- 
+<table height="100" width="600" style="border:3px solid black;">
+<tr>
+<td>
+<b>Filter By Price : </b>
+<br>
+<form>
+<input type="hidden" name="scnm" value={{scnm}}  />
+<input type="text" name="sprice" placeholder="Enter starting price"/> - <input type="text" name="eprice" placeholder="Enter ending price"/> <input type="submit" value="Filter"/>
+</form>
+</td>
+</tr>
+</table> -->
+<!-- <br><br>
+ -->
+
+<!--  <style type="text/css">
+#mainfood{
+	min-height:200px;
+	width:600px;
+	background: rgba(65, 70, 70, 0.4);
+}
+</style>
+ -->
+
+<!-- <div id="mainfood"> -->
+
+<h1>Food Product List  >>  {{scnm}}</h1>
+<font>Total Food Items : {{total}}</font>
+
+{% for p in fplist %}
+<br><br>
+<a href={{curl}}orderlogin/?pid={{p.0}}&price={{p.4}} >
+<table height="120" width="600" style="border:2px solid #209D9D;border-radius:20px;"> 
+<tr>
+<td width="35%" rowspan="3">
+<center>
+<img src={{media_url}}{{p.5}} alt="Image" height="100" width="150" />
+</center>
+</td>
+<td><b>Title : </b>{{p.2}}</td>
+</tr>
+<tr>
+<td><b>Description : </b>{{p.3}}</td>
+</tr>
+<tr>
+<td><b>Price : </b> &#8377;{{p.4}}</td>
+</tr>
+</table>
+</a>
+<!-- 
+</div> -->
+{% endfor %}
+
+
+{% endblock %}
+
+
+
+{% block sidebar %}		
+		
+		<!-- 	<div class="box">
+				<h3>Sub Category List</h3>
+				<ul class="list">
+				{% for subcat in sclist %}
+					<li>
+					<a href={{curl}}viewfoodproduct/?scnm={{subcat.1}} >
+					{{subcat.1}}
+					</a>
+					</li>
+				{% endfor %}
+				</ul> -->
+
+{% endblock %}		
+
+{% block page-bottom %}
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

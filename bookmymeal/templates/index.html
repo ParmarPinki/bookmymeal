@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+
+<style>
+#catmain
+{
+	min-height:450px;
+	width:600px;
+}
+.catmain_part
+{
+	height:150px;
+	width:200px;
+	float:left;
+}
+</style>
+
+<h2> Welcome to Make My Meal </h2>
+
+<h4> Home Page</h4>
+
+<h2>Category List</h2>
+
+<div id="catmain">
+
+{% for cat in clist %}
+<a href={{curl}}viewfood/?scnm={{cat.1}}>
+	<div class="catmain_part">
+	<center>
+	<img src={{media_url}}{{cat.2}} height="100" width="150" alt={{cat.1}} />
+	<br>
+	<b>{{cat.1}}</b>
+	</center>
+	</div>
+</a>	
+{% endfor %}
+
+</div>
+
+{% endblock %} 

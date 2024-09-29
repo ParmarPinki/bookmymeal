@@ -1,0 +1,239 @@
+
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>
+	Book My Meal
+</title>
+<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Bevan" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+<link rel="icon"  href="{% static 'images/logo2.png' %}" />
+
+</head>
+<body style="background: url({% static 'images/bg.jpg' %})">
+
+<div id="wrapper">
+
+{% block header %}
+	<div id="header">
+
+		<!-- logo -->
+		<div id="logo">
+			<h1>
+				<a href="#">Book My Meal</a>
+			</h1>
+		</div>
+
+
+
+
+		<div id="search" style="background: rgba(15, 20, 20, 0.4) url({% static 'images/search.png' %}) top right no-repeat">
+			<form action="" method="post">
+				<div>
+					<input class="text" name="search" size="32" maxlength="64" />
+				</div>
+			</form>
+		</div>
+
+
+
+
+		{% block menu %}
+		<div id="menu">
+			<ul>
+				<li class="first active">
+					<a href="http://127.0.0.1:8000/">Home</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/contact/">Contact</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/service/">Services</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/login/">Login</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/register/">Register</a>
+				</li>
+				
+			</ul><br class="clearfix" />
+		</div>
+		{% endblock %}
+
+
+		<!-- menu ends -->
+
+
+	</div>
+
+	{% endblock %}
+
+
+	<!-- header ends -->
+
+<!--
+	<div id="slider">
+		<div class="viewer">
+			<div class="reel">
+				<div class="slide">
+					<img src="images/myimg1.jpeg" alt="" />
+				</div>
+				<div class="slide">
+					<img src="images/myimg2.jpeg" alt="" />
+				</div>
+				<div class="slide">
+					<img src="images/myimg3.jpeg" alt="" />
+				</div>
+				<div class="slide">
+					<img src="images/myimg4.jpeg" alt="" />
+				</div>
+				<div class="slide">
+					<img src="images/slide05.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="indicator">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+		</div>
+	</div>
+
+
+
+
+	-->
+	{% block page %}
+	<div id="page">
+		
+
+		
+		<div id="content">
+			{% block content %}
+
+
+
+			<div class="box">
+				<h2>
+					Welcome to Book My Meal
+				</h2>
+				<p>
+					My content !!!
+				</p>
+
+
+				<!-- write your design here -->
+
+
+
+			</div>
+
+
+		{% endblock %}	
+		</div>
+		
+
+
+		<!-- content ends -->
+
+		{% block sidebar %}
+		<div id="sidebar">
+
+
+			<div class="box">
+				<h3>
+					Social Links 
+				</h3>
+				
+				<ul class="list">
+					<li class="first">
+						<a href="#">Facebook</a>
+					</li>
+					<li>
+						<a href="#">Gmail</a>
+					</li>
+					<li >
+						<a href="#">Twitter</a>
+					</li>
+					<li class="last">
+						<a href="#">Instagram</a>
+					</li>
+					
+				</ul>
+			</div>
+
+		</div>
+		{% endblock %}
+
+
+			<!-- sidebar ends -->
+
+		<br class="clearfix" />
+
+
+		</div>
+		
+		{% endblock %}
+
+
+	<!-- page ends -->
+
+	{% block page-bottom %}
+	<div id="page-bottom">
+
+
+		<div id="page-bottom-content">
+			<h3>
+				Write Something
+			</h3>
+		
+		</div>
+
+
+		<div id="page-bottom-sidebar">
+			<h3>
+				List Something
+			</h3>
+			<ul class="list">
+				<li class="first">
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+				<li class="last">
+					<a href="#"></a>
+				</li>
+			</ul>
+
+
+		</div><br class="clearfix" />
+	</div>
+	{% endblock %}
+
+
+	<!-- page bottom ends -->
+
+</div>
+
+<!-- wrapper ends -->
+
+{% block footer %}
+
+<div id="footer">
+   <h4> All right reserved 2019-20 &copy; | DesignBy ArJun </h4>
+</div>
+{% endblock %}
+
+<!-- footer ends -->
+
+
+</body>
+</html>

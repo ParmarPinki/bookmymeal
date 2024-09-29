@@ -1,0 +1,104 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+		{% block menu %}
+		<div id="menu">
+			<ul>
+				<li class="first active">
+					<a href="http://127.0.0.1:8000/myadmin/">Home</a>
+				</li>
+				<li>
+					<a href="#">View User</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/myadmin/adminmanage/">Manage Option</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/myadmin/adminsettings/">Settings</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/login/">Logout</a>
+				</li>
+				
+			</ul><br class="clearfix" />
+		</div>
+		{% endblock %}
+	
+
+{% block content %}
+
+
+<style type="text/css">
+
+#link{
+
+	height: 20px;
+	width:300px;
+	border-style: solid;
+	padding: 10px;
+	margin-bottom:5px;
+	padding-bottom: 10px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+
+#link:hover{
+	background: white;
+	
+}
+</style>
+
+<center>
+<h2>Manage Option</h2>
+
+
+<h3 id="link"><a href="http://127.0.0.1:8000/myadmin/addcat/" style="text-decoration: none ;color:green">Add Category</a></h3>
+<br>
+<h3 id="link"><a href="" style="text-decoration: none ;color:green">Manage Category</a></h3>
+
+<br>
+<h3 id="link"><a href="http://127.0.0.1:8000/myadmin/addsubcat/" style="text-decoration: none ;color:green">Add Subcategory</a></h3>
+
+<br>
+<h3 id="link"><a href="http://127.0.0.1:8000/myadmin/addfood" style="text-decoration: none ;color:green">Add Food Product</a></h3>
+
+
+<br>
+<h3 id="link"><a href="" style="text-decoration: none ;color:green ;margin-bottom: 10px;" >Order and Payment History</a></h3>
+
+</center>
+
+
+
+{% endblock %}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

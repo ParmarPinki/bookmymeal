@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+		{% block menu %}
+		<div id="menu">
+			<ul>
+				<li class="first active">
+					<a href="http://127.0.0.1:8000/myadmin/">Home</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/myadmin/viewuser/">View User</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/myadmin/adminmanage/">Manage Option</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/myadmin/adminsettings/">Settings</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8000/login/">Logout</a>
+				</li>
+				
+			</ul><br class="clearfix" />
+		</div>
+		{% endblock %}
+
+{% block content %}
+
+
+<h3>Admin Home Not Working!!!</h3>
+
+{% endblock %} 
